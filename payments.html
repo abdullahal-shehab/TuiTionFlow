@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Payments - TuitionFlow</title>
+<link rel="stylesheet" href="css/style.css"></head><body>
+<header id="nav"></header>
+<main>
+  <h1>Payments</h1>
+  <form id="f" class="card grid" novalidate>
+    <div><label for="stu">Student</label><select id="stu" required></select></div>
+    <div><label for="amt">Amount (৳)</label><input id="amt" type="number" min="1" required></div>
+    <div><label for="method">Method</label><select id="method"></select></div>
+    <div><label for="month">For month</label><input id="month" type="month" required></div>
+    <div style="align-self:end"><button class="btn">Record payment</button></div>
+  </form>
+  <div class="card">
+    <button id="csv" class="btn light">Export CSV</button>
+    <strong style="margin-left:16px">Total: <span id="total">৳0</span></strong>
+  </div>
+  <div class="card tbl"><table><thead><tr><th>Date</th><th>Student</th><th>Amount</th><th>Method</th><th></th></tr></thead><tbody id="rows"></tbody></table></div>
+</main>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="js/firebase-config.js"></script><script src="js/main.js"></script><script src="js/payments.js"></script>
+</body></html>

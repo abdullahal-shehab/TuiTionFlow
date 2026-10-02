@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Attendance - TuitionFlow</title>
+<link rel="stylesheet" href="css/style.css">
+<style>.seg{display:flex;gap:4px}.seg button{min-width:44px;background:#e2e8f0;color:#0f172a}
+.seg .on-present{background:#047857;color:#fff}.seg .on-absent{background:#b91c1c;color:#fff}
+.seg .on-late{background:#b45309;color:#fff}.seg .on-missed{background:#475569;color:#fff}</style>
+</head><body>
+<header id="nav"></header>
+<main>
+  <h1>Attendance</h1>
+  <div class="card grid">
+    <div><label for="date">Date</label><input id="date" type="date"></div>
+    <div><label for="cls">Class</label><select id="cls"></select></div>
+    <div><button id="all" class="btn light">Mark all present</button></div>
+  </div>
+  <p id="note" class="err-text" role="status"></p>
+  <p><small>P = present, A = absent, L = late, M = class missed (not held, not counted against the student)</small></p>
+  <div class="card tbl"><table><thead><tr><th>Roll</th><th>Name</th><th>Class</th><th>Status</th><th></th></tr></thead><tbody id="rows"></tbody></table></div>
+
+  <h2 id="recTop">Student record</h2>
+  <div class="card grid">
+    <div><label for="rs">Student</label><select id="rs"></select></div>
+    <div><label for="rm">Month</label><input id="rm" type="month"></div>
+  </div>
+  <div id="rec" hidden>
+    <div class="grid">
+      <div class="card stat"><div><small>Present</small><h2 id="rp">0</h2></div></div>
+      <div class="card stat"><div><small>Late</small><h2 id="rl">0</h2></div></div>
+      <div class="card stat"><div><small>Absent</small><h2 id="ra">0</h2></div></div>
+      <div class="card stat"><div><small>Class missed</small><h2 id="rmi">0</h2></div></div>
+      <div class="card stat"><div><small>Attendance this month</small><h2 id="rpct">-</h2></div></div>
+      <div class="card stat"><div><small>Attendance all time</small><h2 id="rall">-</h2></div></div>
+    </div>
+    <div class="card"><h2 id="rname"></h2><div class="chk-list" id="rdays"></div></div>
+  </div>
+</main>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="js/firebase-config.js"></script><script src="js/main.js"></script><script src="js/attendance.js"></script>
+</body></html>

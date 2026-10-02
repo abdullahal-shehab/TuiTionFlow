@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TUITION FLOW</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="login card" style="text-align:center">
+    <h1>TuitionFlow</h1>
+    <p id="msg">Loading…</p>
+    <noscript><a href="login.html">Continue to login</a></noscript>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script>
+    auth.onAuthStateChanged(u => location.replace(u ? 'dashboard.html' : 'login.html'));
+    setTimeout(() => {
+      document.getElementById('msg').innerHTML = 'Taking too long? <a href="login.html">Go to login</a>';
+    }, 5000);
+  </script>
+</body>
+</html>

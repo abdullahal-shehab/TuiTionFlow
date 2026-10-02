@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Holidays - TuitionFlow</title>
+<link rel="stylesheet" href="css/style.css"></head><body>
+<header id="nav"></header>
+<main>
+  <h1>Holidays</h1>
+  <form id="f" class="card grid" novalidate>
+    <div><label for="date">Date</label><input id="date" type="date" required></div>
+    <div><label for="reason">Reason</label><input id="reason" placeholder="e.g. Eid, exam week" required></div>
+    <div style="align-self:end"><button class="btn">Add holiday</button></div>
+  </form>
+  <div class="card tbl"><table><thead><tr><th>Date</th><th>Reason</th><th></th></tr></thead><tbody id="rows"></tbody></table></div>
+</main>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="js/firebase-config.js"></script><script src="js/main.js"></script><script src="js/holidays.js"></script>
+</body></html>

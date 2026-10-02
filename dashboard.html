@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Dashboard - TuitionFlow</title>
+<link rel="stylesheet" href="css/style.css"></head><body>
+<header id="nav"></header>
+<main>
+  <h1>Dashboard</h1>
+  <div class="grid">
+    <div class="card stat"><span class="ico green" data-icon="wallet"></span><div><small>Total income</small><h2 id="tot">৳0</h2></div></div>
+    <div class="card stat"><span class="ico teal" data-icon="trend"></span><div><small>Income this month</small><h2 id="inc">৳0</h2></div></div>
+    <div class="card stat"><span class="ico red" data-icon="calx"></span><div><small>Missed classes (total)</small><h2 id="miss">0</h2></div></div>
+    <div class="card stat"><span class="ico amber" data-icon="calx"></span><div><small>Missed this month</small><h2 id="missm">0</h2></div></div>
+    <div class="card stat"><span class="ico indigo" data-icon="users"></span><div><small>Active students</small><h2 id="s">0</h2></div></div>
+    <div class="card stat"><span class="ico blue" data-icon="ucheck"></span><div><small>Present today</small><h2 id="pres">0</h2></div></div>
+  </div>
+
+  <div class="card">
+    <h2 class="hd"><span data-icon="cal"></span>This week</h2>
+    <p><small>Orange = my university classes. Blue = student classes.</small></p>
+    <div class="wk" id="wk"></div>
+  </div>
+
+  <div class="grid">
+    <div class="card"><h2 class="hd"><span data-icon="exam"></span>Exam reminders</h2><ul class="clean" id="exams"></ul></div>
+    <div class="card"><h2 class="hd"><span data-icon="book"></span>Today's tuition</h2><ul class="clean" id="today"></ul></div>
+    <div class="card"><h2 class="hd"><span data-icon="alert"></span>Not paid this month</h2><ul class="clean" id="duelist"></ul></div>
+  </div>
+
+  <div class="card"><h2 class="hd"><span data-icon="chart"></span>Income, last 6 months</h2><div class="bars" id="bars"></div></div>
+</main>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="js/firebase-config.js"></script><script src="js/main.js"></script><script src="js/dashboard.js"></script>
+</body></html>
